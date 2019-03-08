@@ -4,8 +4,8 @@ carpentry: "FIXME"    # what kind of Carpentry (must be either "lc" or "dc" or "
                       # Be sure to update the Carpentry type in _config.yml as well.  
 venue: "FIXME"        # brief name of host site without address (e.g., "Euphoric State University")
 address: "FIXME"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
-country: "FIXME"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1)
-language: "FIXME"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/ISO_639-1)
+country: "FIXME"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes)
+language: "FIXME"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
 latlng: "FIXME"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use https://www.latlong.net/)
 humandate: "FIXME"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
 humantime: "FIXME"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
@@ -29,6 +29,28 @@ double quotation marks around the value, unless specified otherwise.
 And run 'make workshop-check' *before* committing to make sure that changes are good.
 {% endcomment %}
 
+
+
+{% comment %}
+For a workshop please delete the following block
+{% endcomment %}
+<div class="alert alert-danger">
+This is the workshop template. Delete these lines and use it to customize your
+own website. If you are running a self-organized workshop or have not put in a
+workshop request yet, please also fill in 
+<a href="{{site.amy_site}}/submit">this workshop request form</a> to let us know
+about your workshop and our administrator may contact you if we need any extra
+information.
+</div>
+
+{% if page.carpentry != site.carpentry %}
+<div class="alert alert-warning">
+You specified <code>carpentry: {{page.carpentry}}</code> in <code>index.md</code> and
+<code>carpentry: {{site.carpentry}}</code> in <code>_config.yml</code>. Make sure you edit both files. After editing <code>_config.yml</code>, you need to run <code>make serve</code> again to 
+see the changes take effect locally.
+</div>
+{% endif %}
+
 {% comment %}
 EVENTBRITE
 
@@ -47,10 +69,6 @@ displayed if the 'eventbrite' field in the header is not set.
 </iframe>
 {% endif %}
 
-<h4>This is the workshop template. Delete these lines and use it to customize your own website.
-  If you are running a self-organized workshop or have not put in a workshop request yet, please also fill in 
-  <a href="{{site.amy_site}}/submit">this workshop request form</a> to let us know about your workshop
-  and our administrator may contact you if we need any extra information.</h4>
 
 <h2 id="general">General Information</h2>
 
@@ -121,18 +139,16 @@ Modify the block below if there are any special requirements.
 {% endcomment %}
 <p id="requirements">
   <strong>Requirements:</strong> Participants must bring a laptop with a
-  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges
-  on. They should have a few specific software packages installed (listed
-  <a href="#setup">below</a>). They are also required to abide by
-  {% if page.carpentry == "swc" %}
-  Software Carpentry's
-  {% elsif page.carpentry == "dc" %}
-  Data Carpentry's
-  {% elsif page.carpentry == "lc" %}
-  Library Carpentry's
-  {% endif %}
-  <a href="{{site.swc_site}}/conduct.html">Code of Conduct</a>.
+  Mac, Linux, or Windows operating system (not a tablet, Chromebook, etc.) that they have administrative privileges on. They should have a few specific software packages installed (listed <a href="#setup">below</a>).
 </p>
+
+{% comment%}
+CODE OF CONDUCT
+{% endcomment %}
+<p id="code-of-conduct">
+<strong>Code of Conduct:</strong>  Everyone who participates in Carpentries activities is required to conform to the <a href="https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html">Code of Conduct</a>. This document also outlines how to report an incident if needed.
+</p>
+
 
 {% comment %}
 ACCESSIBILITY
@@ -777,7 +793,7 @@ please preview your site before committing, and make sure to run
         <p>Go to your newly created OpenRefine directory.</p>
         <p>Launch OpenRefine by entering <code>./refine</code> into the terminal within the OpenRefine directory.</p>
         <p>If you are using a different browser, or if OpenRefine does not automatically open for you, point your browser at <a href="http://127.0.0.1:3333/">http://127.0.0.1:3333/</a> or <a href="http://localhost:3333">http://localhost:3333</a> to use the program.</p>
-        <article>
+      </article>
     </div>
   </div>
 </div> {% comment %} End of 'OpenRefine' section. {% endcomment %}

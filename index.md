@@ -1,7 +1,6 @@
 ---
 layout: workshop      # DON'T CHANGE THIS.
-carpentry: "dc"    # what kind of Carpentry (must be either "lc" or "dc" or "swc").  
-                      # Be sure to update the Carpentry type in _config.yml as well.  
+carpentry: "dc"    # what kind of Carpentry (must be either "lc" or "dc" or "swc").   
 venue: "Tufts University"        # brief name of host site without address (e.g., "Euphoric State University")
 address: "TBD"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
 country: "US"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes)

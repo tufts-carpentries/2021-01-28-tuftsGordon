@@ -1,21 +1,24 @@
 ---
 layout: workshop      # DON'T CHANGE THIS.
-carpentry: "dc"    # what kind of Carpentry (must be either "lc" or "dc" or "swc").   
-venue: "Tufts University"        # brief name of host site without address (e.g., "Euphoric State University")
-address: "TBD"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
-country: "US"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes)
-language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
+carpentry: "FIXME"    # what kind of Carpentry (must be either "lc" or "dc" or "swc").  
+                      # Be sure to update the Carpentry type in _config.yml as well.  
+venue: "FIXME"        # brief name of host site without address (e.g., "Euphoric State University")
+address: "FIXME"      # full street address of workshop (e.g., "Room A, 123 Forth Street, Blimingen, Euphoria")
+country: "FIXME"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes)
+language: "FIXME"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
 latlng: "FIXME"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use https://www.latlong.net/)
-humandate: "May 10-11, 2019"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humandate: "FIXME"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
 humantime: "FIXME"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
-startdate: 2019-05-10      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: 2019-05-11       # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["Ari Gofman", "Kyle Monahan"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
-helper: ["Kristin Lee"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-email: ["kristin.lee@tufts.edu"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
+startdate: FIXME      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+enddate: FIXME        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+instructor: ["FIXME"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+helper: ["FIXME"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
+email: ["fixme@example.org"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
 collaborative_notes:             # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
 eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
+
+{% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
 
 {% comment %}
 HEADER
@@ -26,6 +29,19 @@ double quotation marks around the value, unless specified otherwise.
 And run 'make workshop-check' *before* committing to make sure that changes are good.
 {% endcomment %}
 
+
+
+{% comment %}
+For a workshop please delete the following block
+{% endcomment %}
+<div class="alert alert-danger">
+This is the workshop template. Delete these lines and use it to customize your
+own website. If you are running a self-organized workshop or have not put in a
+workshop request yet, please also fill in 
+<a href="{{site.amy_site}}/submit">this workshop request form</a> to let us know
+about your workshop and our administrator may contact you if we need any extra
+information.
+</div>
 
 {% if page.carpentry != site.carpentry %}
 <div class="alert alert-warning">
@@ -226,7 +242,7 @@ Collaborative Notes
 
 If you want to use an Etherpad, go to
 
-http://pad.software-carpentry.org/YYYY-MM-DD-site
+http://pad.carpentries.org/YYYY-MM-DD-site
 
 where 'YYYY-MM-DD-site' is the identifier for your workshop,
 e.g., '2015-06-10-esu'.
@@ -330,7 +346,7 @@ please preview your site before committing, and make sure to run
               </li>
               <li>
                 <strong>
-                  Select “Use the nano editor by default” and click on “Next”.
+                  Select "Use the nano editor by default" and click on "Next".
                 </strong>
               </li>
               {% comment %} Adjusting your PATH environment {% endcomment %}
@@ -373,7 +389,7 @@ please preview your site before committing, and make sure to run
         </ol>
         <p>This will provide you with both Git and Bash in the Git Bash program.</p>
       </article>
-      <article role="tabpanel" class="tab-pane" id="shell-macos">
+      <article role="tabpanel" class="tab-pane active" id="shell-macos">
         <p>
           The default shell in all versions of macOS is Bash, so no
           need to install anything.  You access Bash from the Terminal
@@ -385,7 +401,7 @@ please preview your site before committing, and make sure to run
           Terminal in your dock for this workshop.
         </p>
       </article>
-      <article role="tabpanel" class="tab-pane" id="shell-linux">
+      <article role="tabpanel" class="tab-pane active" id="shell-linux">
         <p>
           The default shell is usually Bash, but if your
           machine is set up differently you can run it by opening a
@@ -693,23 +709,42 @@ please preview your site before committing, and make sure to run
       <li role="presentation" class="active"><a data-os="windows" href="#sql-windows" aria-controls="Windows" role="tab" data-toggle="tab">Windows</a></li>
       <li role="presentation"><a data-os="macos" href="#sql-macos" aria-controls="MacOS" role="tab" data-toggle="tab">MacOS</a></li>
       <li role="presentation"><a data-os="linux" href="#sql-linux" aria-controls="Linux" role="tab" data-toggle="tab">Linux</a></li>
+      {% if page.carpentry != 'dc' %}
+      <li role="presentation"><a data-os="Web" href="#sql-web" aria-controls="Linux" role="tab" data-toggle="tab">Web</a></li>
+      {% endif %}
     </ul>
-
+    {% if page.carpentry == 'dc' %}
     <div class="tab-content">
       <article role="tabpanel" class="tab-pane active" id="sql-windows">
         <p>
-          The <a href="https://www.sqlite.org/download.html">
-            {% if page.carpentry == "swc" %}
-            Software Carpentry
-            {% elsif page.carpentry == "dc" %}
-            Data Carpentry
-            {% elsif page.carpentry == "lc" %}
-            Library Carpentry
-            {% endif %}
-            Windows Installer
-	  </a>
-          installs SQLite for Windows.
-          If you used the installer to configure nano, you don't need to run it again.
+          Visit <a href="https://sqlitebrowser.org/dl/">SqliteBrowser</a> and download and install it. Version 3.11.0 or greater.
+        </p>
+      </article>
+      <article role="tabpanel" class="tab-pane active" id="sql-macos">
+        <p>
+          Visit <a href="https://sqlitebrowser.org/dl/">SqliteBrowser</a> and download and install it. Version 3.11.0 or greater.
+        </p>
+      </article>
+      <article role="tabpanel" class="tab-pane active" id="sql-linux">
+        <p>
+          Visit <a href="https://sqlitebrowser.org/dl/">SqliteBrowser</a> and download and install it. Version 3.11.0 or greater.
+        </p>
+      </article>
+      
+    </div>
+    {%else%}
+    <div class="tab-content">
+      <article role="tabpanel" class="tab-pane active" id="sql-windows">
+        <p>
+          <ul>
+            <li>Run git-bash from the start menu</li>
+            <li>Copy the following <code>curl {{site.url}}{{site.baseurl}}/getsql.sh | bash</code></li>
+            <li>Paste it into the window that git bash opened. If you're unsure, ask an instructor for help</li>
+            <li>You should see something like <code>3.27.2 2019-02-25 16:06:06 ...</code></li>
+          </ul>
+            
+          <p>If you want to do this manually, download <a href="https://www.sqlite.org/2019/sqlite-tools-win32-x86-3270200.zip">sqlite3</a>, make a bin directory in the user's home directory, unzip sqlite3, move it into the bin directory, and then add the bin directory to the path.</p>
+
         </p>
       </article>
       <article role="tabpanel" class="tab-pane active" id="sql-macos">
@@ -722,7 +757,18 @@ please preview your site before committing, and make sure to run
           SQLite comes pre-installed on Linux.
         </p>
       </article>
+      <article role="tabpanel" class="tab-pane active" id="sql-web">
+        <p>
+          <ul>
+            <li>In case of problems: register for an account at <a href="http://pythonanywhere.com/">Python Anywhere</a></li>
+            <li>Download <a href="http://swcarpentry.github.io/sql-novice-survey/files/survey.db">survey.db</a></li>
+            <li>Click on files and upload survey.db</li>
+            <li>Click on dashboard and Choose new console <code>$ bash</code></li>
+            </ul>
+        </p>
+      </article>
     </div>
+      {%endif%}
   </div>
 
   <p><strong>If you installed Anaconda, it also has a copy of SQLite

@@ -310,6 +310,7 @@ please preview your site before committing, and make sure to run
   </p>
 
   <div>
+  
     <ul class="nav nav-tabs nav-justified" role="tablist">
       <li role="presentation" class="active"><a data-os="windows" href="#shell-windows" aria-controls="Windows" role="tab" data-toggle="tab">Windows</a></li>
       <li role="presentation"><a data-os="macos" href="#shell-macos" aria-controls="MacOS" role="tab" data-toggle="tab">MacOS</a></li>
@@ -419,6 +420,7 @@ please preview your site before committing, and make sure to run
   </p>
 
   <div>
+  
     <ul class="nav nav-tabs nav-justified" role="tablist">
       <li role="presentation" class="active"><a data-os="windows" href="#git-windows" aria-controls="Windows" role="tab" data-toggle="tab">Windows</a></li>
       <li role="presentation"><a data-os="macos" href="#git-macos" aria-controls="MacOS" role="tab" data-toggle="tab">MacOS</a></li>
@@ -474,6 +476,7 @@ please preview your site before committing, and make sure to run
   </p>
 
   <div>
+  
     <ul class="nav nav-tabs nav-justified" role="tablist">
       <li role="presentation" class="active"><a data-os="windows" href="#editor-windows" aria-controls="Windows" role="tab" data-toggle="tab">Windows</a></li>
       <li role="presentation"><a data-os="macos" href="#editor-macos" aria-controls="MacOS" role="tab" data-toggle="tab">MacOS</a></li>
@@ -555,6 +558,7 @@ please preview your site before committing, and make sure to run
   </p>
 
   <div>
+  
     <ul class="nav nav-tabs nav-justified" role="tablist">
       <li role="presentation" class="active"><a data-os="windows" href="#python-windows" aria-controls="Windows" role="tab" data-toggle="tab">Windows</a></li>
       <li role="presentation"><a data-os="macos" href="#python-macos" aria-controls="MacOS" role="tab" data-toggle="tab">MacOS</a></li>
@@ -632,6 +636,7 @@ please preview your site before committing, and make sure to run
   </p>
 
   <div>
+  
     <ul class="nav nav-tabs nav-justified" role="tablist">
       <li role="presentation" class="active"><a data-os="windows" href="#rstats-windows" aria-controls="Windows" role="tab" data-toggle="tab">Windows</a></li>
       <li role="presentation"><a data-os="macos" href="#rstats-macos" aria-controls="MacOS" role="tab" data-toggle="tab">MacOS</a></li>
@@ -687,6 +692,7 @@ please preview your site before committing, and make sure to run
   </p>
 
   <div>
+  
     <ul class="nav nav-tabs nav-justified" role="tablist">
       <li role="presentation" class="active"><a data-os="windows" href="#sql-windows" aria-controls="Windows" role="tab" data-toggle="tab">Windows</a></li>
       <li role="presentation"><a data-os="macos" href="#sql-macos" aria-controls="MacOS" role="tab" data-toggle="tab">MacOS</a></li>

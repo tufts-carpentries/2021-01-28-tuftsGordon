@@ -6,15 +6,15 @@ address: "Room 302, 35 Professors Row, Medford, MA"      # full street address o
 country: "us"      # lowercase two-letter ISO country code such as "fr" (see https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes)
 language: "en"     # lowercase two-letter ISO language code such as "fr" (see https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)
 latlng: "42.406172,-71.118840"       # decimal latitude and longitude of workshop venue (e.g., "41.7901128,-87.6007318" - use https://www.latlong.net/)
-humandate: "September 6-7, 2019"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
-humantime: "9:00 am - 4:00 pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
-startdate: 2019-09-06      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
-enddate: 2019-09-07        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
-instructor: ["Ari Gofman", "Kyle Monahan", "Kristin Lee"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
+humandate: "January 28 and January 30, 2021"    # human-readable dates for the workshop (e.g., "Feb 17-18, 2020")
+humantime: "5:00 - 8:00 pm,  10:00 am - 5:00 pm"    # human-readable times for the workshop (e.g., "9:00 am - 4:30 pm")
+startdate: 2021-01-28      # machine-readable start date for the workshop in YYYY-MM-DD format like 2015-01-01
+enddate: 2021-01-30        # machine-readable end date for the workshop in YYYY-MM-DD format like 2015-01-02
+instructor: ["Kyle Monahan", "Kristin Lee"] # boxed, comma-separated list of instructors' names as strings, like ["Kay McNulty", "Betty Jennings", "Betty Snyder"]
 helper: ["Aurora Li"]     # boxed, comma-separated list of helpers' names, like ["Marlyn Wescoff", "Fran Bilas", "Ruth Lichterman"]
-email: ["kristin.lee@tufts.edu"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
-collaborative_notes: https://pad.carpentries.org/2019-05-10-tuftsUEP            # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
-eventbrite: "64976775284"           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
+email: ["kyle.monahan@tufts.edu"]    # boxed, comma-separated list of contact email addresses for the host, lead instructor, or whoever else is handling questions, like ["marlyn.wescoff@example.org", "fran.bilas@example.org", "ruth.lichterman@example.org"]
+collaborative_notes: https://pad.carpentries.org/2021-01-28-tuftsGordon            # optional: URL for the workshop collaborative notes, e.g. an Etherpad or Google Docs document
+eventbrite:           # optional: alphanumeric key for Eventbrite registration, e.g., "1234567890AB" (if Eventbrite is being used)
 ---
 
 {% comment %} See instructions in the comments below for how to edit specific sections of this workshop template. {% endcomment %}
@@ -188,7 +188,6 @@ Display the contact email address set in the configuration file.
 
 {% comment %} 
 SURVEYS - DO NOT EDIT SURVEY LINKS 
-{% endcomment %}
 <h2 id="surveys">Surveys</h2>
 <p>Please be sure to complete these surveys before and after the workshop.</p>
 {% if site.carpentry == "swc" %} 
@@ -201,7 +200,7 @@ SURVEYS - DO NOT EDIT SURVEY LINKS
 <p><a href="{{ site.lc_pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
 <p><a href="{{ site.lc_post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
 {% endif %}
-
+{% endcomment %}
 <hr/>
 
 
@@ -397,7 +396,7 @@ please preview your site before committing, and make sure to run
     </div>
   </div>
 </div> {% comment %} End of 'shell' section. {% endcomment %}
-
+{% comment %}
 <div id="git"> {% comment %} Start of 'Git' section. GitHub browser compatability
   is given at https://help.github.com/articles/supported-browsers/{% endcomment %}
   <h3>Git</h3>
@@ -460,6 +459,7 @@ please preview your site before committing, and make sure to run
     </div>
   </div>
 </div> {% comment %} End of 'Git' section. {% endcomment %}
+{% endcomment %}
 
 <div id="editor"> {% comment %} Start of 'editor' section. {% endcomment %}
   <h3>Text Editor</h3>
